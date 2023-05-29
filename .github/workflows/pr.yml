@@ -1,0 +1,16 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+concurrency:
+  group: ci-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy_preview:
+    runs-on: ubuntu-latest
+    environment: preview
+    steps:
+      - run: echo 'Deploying to preview environment'

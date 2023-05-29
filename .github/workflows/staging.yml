@@ -1,0 +1,16 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches:
+      - 'main'
+
+concurrency:
+  group: staging
+
+jobs:
+  deploy_staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: echo 'Deploying to staging environment'
