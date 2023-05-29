@@ -1,5 +1,5 @@
 # Github Environment Deployment
-Public repository to checkout github environments deployment that we could use in jira to keep track of releases
+Public repository to checkout github environments deployment that we could use in jira to keep track of deployments
 
 ## Preview
 
