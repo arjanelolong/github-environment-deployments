@@ -1,0 +1,16 @@
+name: Production Deployment
+
+on:
+  push:
+    tags:
+      - v*
+
+concurrency:
+  group: production
+
+jobs:
+  deploy_production:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: echo 'Deploying to production environment'
